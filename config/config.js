@@ -4,7 +4,11 @@ var config =
 {
   address: '0.0.0.0',
   electronOptions: {},
-  ipWhitelist: [],
+  ipWhitelist: [
+    '127.0.0.1',
+    '::ffff:127.0.0.1',
+    '::1'
+  ],
   modules: [
     {
       module: 'alert',
@@ -23,7 +27,7 @@ var config =
       module: 'clock',
       position: 'top_left',
       config: {},
-      hidden: false
+      hidden: true
     },
     {
       module: 'calendar',
@@ -163,7 +167,7 @@ var config =
         apiKey: ''
       },
       hidden: false
-    }
+    },
   ],
   paths: {
     modules: 'modules',
